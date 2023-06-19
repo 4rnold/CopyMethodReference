@@ -15,7 +15,7 @@
          Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-description -->
     <description><![CDATA[
     Copy the method reference with parameters.<br>
-    Copy Format: [ClassName]#[MethodName]([ParameterType] [ParameterName],...)
+    Copy Format: [ReturnType] [ClassName]#[MethodName]([ParameterType] [ParameterName],...)
   ]]></description>
 
     <!-- Product and plugin compatibility requirements.
@@ -31,7 +31,7 @@
     </extensions>
     <actions>
         <action id="com.github.arnold.CopyMethodReference"
-                class="com.github.arnold.copymethodreference.CopyMethodReference" text="Copy Method Reference with parameters"
+                class="com.github.arnold.copymethodreference.CopyMethodReference" text="Copy Method Reference With Parameters"
                 description="CopyMethodReference">
             <add-to-group group-id="Copy.Paste.Special" anchor="after" relative-to-action="CopyReference"/>
             <keyboard-shortcut keymap="$default" first-keystroke="shift ctrl alt M"/>

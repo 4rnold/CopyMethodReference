@@ -37,8 +37,14 @@ public class CopyMethodReference extends AnAction {
                 if (containingClass != null && containingClass.getName() != null) {
                     String className = containingClass.getName();
                     String methodName = method.getName();
+                    PsiType returnType = method.getReturnType();
+
+                    String returnTypeText = "";
+                    if (returnType != null) {
+                        returnTypeText = returnType.getPresentableText() + " ";
+                    }
                     String parameterTypeNames = this.concatenateParameterTypes(method);
-                    String classDotMethod = className + "#" + methodName + "(" + parameterTypeNames + ")";
+                    String classDotMethod = returnTypeText + className + "#" + methodName + "(" + parameterTypeNames + ")";
                     //LOG.debug("Copying Class.Method: " + classDotMethod);
                     CopyPasteManager.getInstance().setContents(new StringSelection(classDotMethod));
 //                    if (editor != null && file != null && project != null) {
