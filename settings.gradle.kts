@@ -1,1 +1,7 @@
-rootProject.name = "CopyMethodReference"
+pluginManagement {
+    repositories {
+        mavenCentral()
+        gradlePluginPortal()
+    }
+}
+

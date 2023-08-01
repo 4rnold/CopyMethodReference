@@ -9,7 +9,6 @@ import com.intellij.openapi.util.text.StringUtil;
 import com.intellij.openapi.wm.StatusBar;
 import com.intellij.openapi.wm.WindowManager;
 import com.intellij.psi.*;
-import org.jetbrains.annotations.NotNull;
 
 import java.awt.datatransfer.StringSelection;
 import java.text.MessageFormat;
@@ -18,7 +17,7 @@ import java.util.List;
 
 public class CopyMethodReference extends AnAction {
 
-    private PsiMethod findMethod(@NotNull PsiElement element) {
+    private PsiMethod findMethod(PsiElement element) {
         return element instanceof PsiMethod ? (PsiMethod)element : null;
     }
 
